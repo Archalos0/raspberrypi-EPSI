@@ -18,8 +18,6 @@ int main()
 
 	pinMode(red, OUTPUT);
 	pinMode(green, OUTPUT);
-
-    SDL_Init(SDL_INIT_TIMER);
     
     SDL_TimerID timer; /* Variable pour stocker le numéro du timer */
     while(1)
