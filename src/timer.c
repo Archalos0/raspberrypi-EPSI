@@ -1,6 +1,6 @@
 #include <wiringPi.h>
 #include <stdio.h>
-#include "SDL.h"
+#include <SDL.h>
 
 SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER);
 
