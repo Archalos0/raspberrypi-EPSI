@@ -1,6 +1,8 @@
 #include <wiringPi.h>
 #include <stdio.h>
 
+SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER);
+
 void RougeClignote(int red)
 {
     digitalWrite(red, HIGH);
