@@ -17,7 +17,7 @@ wiringPiSetup();
     while(1){
 
         if(RFID_UID == []){
-            print('Badge est autorisé !');
+            print('Badge autorisé !');
             digitalWrite(green,HIGH);
         }
         else{
