@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include <pthread.h>
 
-#include "module/diode.h"
+#include "led/diode.h"
 
 struct args {
 	int pin;
-	//int intervalMillisecond;
+	int intervalleSecondes;
 };
 
 int main (void) {
@@ -15,7 +15,7 @@ int main (void) {
 
     struct args *params = (struct args *) malloc(sizeof(struct args));
 	params->pin = 1;
-
+	params->intervalleSecondes = 1;
 
     //ClignotementLed((void *)params);
 	pthread_create(&thread1, NULL, ClignotementLed, (void *) params);
