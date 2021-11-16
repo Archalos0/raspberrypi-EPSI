@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
-//#include <wiringPi.h>
+#include <wiringPi.h>
 #include <time.h>
 #include <unistd.h>
 #include <stdbool.h> 
@@ -28,16 +28,15 @@ void *ClignotementLed(void *arg){
 			estLaPremiereEntree = false;
 			
 			if (isLedTurnOn == true) {
-				//digitalWrite(pinLed, LOW);
-				printf("pin %d Allumé\n",  ((struct args *) arg)->pin);
+				digitalWrite(((struct args *) arg)->pin, LOW);
 			} else {
-				//digitalWrite(pinLed, HIGH);
-				printf("pin %d Eteinte\n", ((struct args *) arg)->pin);
+			    digitalWrite(((struct args *) arg)->pin, HIGH);
 			}
 			isLedTurnOn = !isLedTurnOn;
 			timespec_get(&tempsDernierClignotement, TIME_UTC );
 		}
 	}
+	
 	// Arrêt propre du thread
 	pthread_exit(EXIT_SUCCESS);
 }
