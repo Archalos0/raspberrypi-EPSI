@@ -3,7 +3,6 @@
 #include <pthread.h>
 #include <wiringPi.h>
 #include <time.h>
-#include <unistd.h>
 #include <stdbool.h> 
 
 struct args {
